@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @font-face {
+      font-family: RoladeFree;
+      src: url(css/RoladeFree.ttf);
+    }
+
+    .rol {
+      font-family: 'roladefree'
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Set a page title -->
+  <title>Weather</title>
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="/css/tachyons.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="rol">
+
+    <!-- If there is an error, this box is shown. 'dn' is the only required class -->
+    <div id="error" class="dn bg-red white pa4 fixed bottom-0 w-100">
+      Sorry, we couldn't find that city.
+    </div>
+
+    <!-- Search Box -->
+
+    <div class="flex flex-wrap">
+
+      <div class="w-50-ns pa4 pt5">
+
+        <img src="todayforecast.png">
+
+        <form id="location-search" class="ml5 mr5 pt2">
+          <h3 class="flex w-50-ns center flex-wrap items-baseline">
+          <input type="text" id="area" value="Boston" class="flex-auto">
+        </h3>
+        </form>
+
+      </div>
+
+      <div class="w-50-ns">
+
+        <div class="vh-50 flex flex-wrap pa4">
+
+          <div id="picture_of_weather" class="weather">
+
+            <div class="weather-raincloud">
+              <img src="/raincloud.png" /></div>
+
+            <div class="weather-sun">
+              <img src="/sun.png" /></div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Content -->
+
+    <div class="flex flex-wrap">
+
+      <div class="w-50-ns pa4">
+
+        <div class="tl w-third-ns">
+          <h2>City: <span id="location-name"></span></h2>
+          <h2>Country: <span id="country"></span></h2>
+        </div>
+
+
+        <div class="tl w-third-ns">
+          <h2>Temperature</h2>
+          <p>Currently: <span id="temp"></span></p>
+          <p>Max Temp: <span id="temp-max"></span></p>
+          <p>Min Temp: <span id="temp-min"></span></p>
+        </div>
+
+        <div class="tl w-third-ns">
+          <h2>Weather</h2>
+          <p>Condition: <span id="condition"></span></p>
+          <p>Details: <span id="condition-description"></span></p>
+          <p>Wind : <span id="wind-speed"></span>mph</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- -->
+
+  </div>
+
+
+
+
+
+
+  <!-- Site JavaScript -->
+  <script src="/javascript/toggleClass.js" charset="utf-8"></script>
+  <script src="/javascript/main.js" charset="utf-8"></script>
+  <script src="/javascript/weather.js" charset="utf-8"></script>
+</body>
+
+</html>

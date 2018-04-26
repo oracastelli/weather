@@ -1,0 +1,45 @@
+/* ========================================
+ * CSS written here will override Tachyons
+ * ======================================== */
+
+div.weather-raincloud,
+div.weather-sun {
+    display: none;
+}
+
+.hot {
+  background: orange;
+  color: white;
+}
+
+div.hot,
+div.weather-sun {
+    display: inline-block;
+}
+
+.cold {
+  background: darkblue;
+  color: white;
+}
+
+.warm {
+  background: #9ac0ea;
+  color: white;
+}
+
+.warm .cloudy .calm {
+  background: #9ac0ea;
+}
+
+.rain {
+  background: #4f6782;
+  color: #white;
+}
+
+div.rain div.weather-raincloud {
+    display: inline-block;
+}
+
+.rain .cold {
+  background: blue;
+}
